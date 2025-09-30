@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naegeli Transportation - Heavy Haul Experts Since 1956</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b00;
+        }
+        
+        .header-contact {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff6b00;
+        }
+        
+        .btn {
+            background: #ff6b00;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #e55f00;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #ff6b00;
+            color: #ff6b00;
+        }
+        
+        .btn-secondary:hover {
+            background: #ff6b00;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><path fill="%23444" d="M0 300 L300 200 L600 350 L900 250 L1200 320 L1200 600 L0 600 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero .btn {
+            font-size: 1.1rem;
+            padding: 15px 40px;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* Trust Indicators */
+        .trust-bar {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        .trust-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .trust-item {
+            text-align: center;
+        }
+        
+        .trust-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b00;
+            display: block;
+        }
+        
+        /* Service Area */
+        .service-area {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .map-placeholder {
+            background: #e0e0e0;
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 30px;
+        }
+        
+        .states-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6b00;
+        }
+        
+        /* What We Move */
+        .what-we-move {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+        
+        .move-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .move-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid #ff6b00;
+        }
+        
+        .move-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .move-item ul {
+            list-style: none;
+            color: #666;
+        }
+        
+        .move-item li:before {
+            content: "✓ ";
+            color: #ff6b00;
+            font-weight: bold;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        
+        .testimonial-card {
+            background: #2a2a2a;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 40px auto 0;
+            border-left: 4px solid #ff6b00;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #ff6b00;
+        }
+        
+        /* Client Logos */
+        .clients {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            align-items: center;
+        }
+        
+        .client-logo {
+            background: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #666;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Why Choose */
+        .why-choose {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #ff6b00;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: #ff6b00;
+        }
+        
+        .cta-section .btn:hover {
+            background: #f0f0f0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .footer-section h4 {
+            color: #ff6b00;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #ff6b00;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .header-contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .trust-items {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">NAEGELI TRANSPORTATION</div>
+            <div class="header-contact">
+                <a href="tel:7139464000" class="phone">📞 (713) 946-4000</a>
+                <a href="#quote" class="btn">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Houston's Heavy Haul Experts Since 1956</h1>
+        <p>Professional heavy equipment transportation and rigging services across Texas, Louisiana, Arkansas, and Oklahoma</p>
+        <div class="hero-cta">
+            <a href="#quote" class="btn">Request a Quote</a>
+            <a href="tel:7139464000" class="btn btn-secondary">Call (713) 946-4000</a>
+        </div>
+    </section>
+
+    <!-- Primary Services -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Core Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚛</div>
+                    <h3>Heavy Haul Transportation</h3>
+                    <p>Specialized transport for oversized, overweight, and over-dimensional equipment. From 2,000 to 200,000 lbs.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Machine Rigging & Moving</h3>
+                    <p>Complete turnkey service for machine tool installation, shop moves, and industrial equipment relocation.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item">
+                <span class="trust-number">65+</span>
+                <span>Years in Business</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">70+</span>
+                <span>Vehicles</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">65+</span>
+                <span>DOT-Certified Drivers</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">★★★★★</span>
+                <span>Highest DOT Rating</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area">
+        <div class="container">
+            <h2 class="section-title">Where We Serve</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666;">Serving the Gulf Coast Region</p>
+            <div class="states-list">
+                <span>🏢 Local Houston</span>
+                <span>🗺️ Statewide Texas</span>
+                <span>📍 Louisiana</span>
+                <span>📍 Arkansas</span>
+                <span>📍 Oklahoma</span>
+            </div>
+            <div class="map-placeholder">
+                📍 Interactive Service Area Map (TX, LA, AR, OK)
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Move -->
+    <section class="what-we-move">
+        <div class="container">
+            <h2 class="section-title">What We Move</h2>
+            <div class="move-grid">
+                <div class="move-item">
+                    <h4>Construction Equipment</h4>
+                    <ul>
+                        <li>Excavators</li>
+                        <li>Dozers & Loaders</li>
+                        <li>Graders & Compactors</li>
+                        <li>Trenchers & Scrapers</li>
+                    </ul>
+                </div>
+                <div class="move-item">
+                    <h4>Cranes</h4>
+                    <ul>
+                        <li>Crawler Cranes</li>
+                        <li>Truck Cranes</li>
+                        <li>Rough Terrain</li>
+                        <li>All Types & Sizes</li>
+                    </ul>
+                </div>
+                <div class="move-item">
+                    <h4>Forklifts</h4>
+                    <ul>
+                        <li>Warehouse Style</li>
+                        <li>Heavy Lift Capacity</li>
+                        <li>Container Handlers</li>
+                        <li>5,000-100,000 lbs</li>
+                    </ul>
+                </div>
+                <div class="move-item">
+                    <h4>Machine Tools</h4>
+                    <ul>
+                        <li>CNC Equipment</li>
+                        <li>Fabricating Equipment</li>
+                        <li>Injection Machines</li>
+                        <li>Industrial Machinery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">What Our Clients Say</h2>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"When it comes to moving large shop equipment, Naegeli is the only choice anyone should make to ensure it is done properly, efficiently, and safely. We relied on Naegeli for our combined shop move into a new facility moving over 1,000 tons of equipment. They performed stupendously with absolutely no issues!"</p>
+                <p class="testimonial-author">Daniel LaLonde, Manufacturing Engineer - Gulf Coast Modification</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="clients">
+        <div class="container">
+            <h2 class="section-title">We Come Highly Recommended</h2>
+            <div class="client-grid">
+                <div class="client-logo">SCHLUMBERGER</div>
+                <div class="client-logo">BIGGE CRANE</div>
+                <div class="client-logo">TEREX</div>
+                <div class="client-logo">BECHTEL</div>
+                <div class="client-logo">MANITOWOC</div>
+                <div class="client-logo">KOBELCO</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Naegeli</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h4>65+ Years Experience</h4>
+                    <p>Family-owned and operated since 1956</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Highest Safety Rating</h4>
+                    <p>Top DOT rating with safety-conscious drivers</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h4>Full Certification</h4>
+                    <p>TWIC and Hazmat certified for all projects</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔧</div>
+                    <h4>Turnkey Service</h4>
+                    <p>Complete rigging, moving, and installation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Move Your Equipment?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Get a free quote today or speak with our team</p>
+            <div class="cta-buttons">
+                <a href="#quote" class="btn">Request a Quote</a>
+                <a href="tel:7139464000" class="btn">Call (713) 946-4000</a>
+                <a href="#" class="btn">We're Hiring Drivers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>7201 Easthaven Blvd.<br>
+                Houston, Texas 77017</p>
+                <p>Phone: (713) 946-4000<br>
+                Fax: (713) 946-4375<br>
+                Toll Free: (800) 451-4217</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Heavy Haul Transportation</a></li>
+                    <li><a href="#">Machine Tool Moving</a></li>
+                    <li><a href="#">Rigging Services</a></li>
+                    <li><a href="#">Equipment Installation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Fleet</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Service Area</h4>
+                <ul>
+                    <li>Houston, TX</li>
+                    <li>Texas (Statewide)</li>
+                    <li>Louisiana</li>
+                    <li>Arkansas</li>
+                    <li>Oklahoma</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Naegeli Transportation, Inc. All rights reserved. | Let Us Pull Your Weight</p>
+        </div>
+    </footer>
+</body>
+</html>
