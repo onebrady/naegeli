@@ -36,14 +36,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Skip to content link (accessibility) */}
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-orange-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
-      >
-        Skip to content
-      </a>
-
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-200 ${
           isScrolled ? "shadow-lg" : ""
