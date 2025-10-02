@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Header from "@/components/header/Header";
 import Footer from "@/components/header/Footer";
-import CraneRiggingHero from "@/components/sections/cranerigging/CraneRiggingHero";
+import CraneRiggingPageHeader from "@/components/sections/cranerigging/CraneRiggingPageHeader";
 import SocialProofBanner from "@/components/sections/cranerigging/SocialProofBanner";
 import ServiceOverview from "@/components/sections/cranerigging/ServiceOverview";
 import WhatSetsUsApart from "@/components/sections/cranerigging/WhatSetsUsApart";
@@ -41,8 +41,8 @@ export default function CraneRiggingPage() {
   return (
     <>
       <Header />
-      <main id="main">
-        <CraneRiggingHero />
+      <main id="main" className="pt-[105px] md:pt-[129px]">
+        <CraneRiggingPageHeader />
         <SocialProofBanner />
         <ServiceOverview />
         <WhatSetsUsApart />

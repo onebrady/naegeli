@@ -10,16 +10,16 @@ export default function SocialProofBanner() {
   };
 
   const clients = [
-    { name: "Schlumberger", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Schlumberger" },
-    { name: "Weatherford", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Weatherford" },
-    { name: "Bechtel", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Bechtel" },
-    { name: "Bigge Crane", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Bigge+Crane" },
-    { name: "Kobelco", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Kobelco" },
-    { name: "Terex", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Terex" },
-    { name: "Manitowoc", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Manitowoc" },
-    { name: "DMG MORI", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=DMG+MORI" },
-    { name: "Cameron", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Cameron" },
-    { name: "Mustang CAT", logo: "https://placehold.co/200x80/e5e7eb/64748b?text=Mustang+CAT" },
+    { name: "Schlumberger", logo: "/images/slb-logo.png" },
+    { name: "Weatherford", logo: "/images/weatherford-logo.png" },
+    { name: "Bechtel", logo: "/images/bechtel-logo.png" },
+    { name: "Bigge Crane", logo: "/images/biggie-crane-logo.png" },
+    { name: "Kobelco", logo: "/images/kobelco-logo.png" },
+    { name: "Terex", logo: "/images/terex.png" },
+    { name: "Manitowoc", logo: "/images/manitowoc-logo.png" },
+    { name: "DMG MORI", logo: "/images/dmg-mori-logo.png" },
+    { name: "Cameron", logo: "/images/cameron-logo.png" },
+    { name: "Mustang CAT", logo: "/images/mustang-cat-logo.png" },
   ];
 
   return (

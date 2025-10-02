@@ -18,7 +18,7 @@ export default function FleetShowcase() {
         "55-85 ton capacity",
         "Ideal for tall equipment clearance",
       ],
-      image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Lowboy+Trailers",
+      image: "/images/trailer-type.webp",
     },
     {
       title: "Beam & Rail Trailers",
@@ -28,7 +28,7 @@ export default function FleetShowcase() {
         "Perfect for long, heavy loads",
         "Versatile hauling options",
       ],
-      image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Beam+%26+Rail",
+      image: "/images/trailer-type.webp",
     },
     {
       title: "Tilt & Landoll Trailers",
@@ -38,7 +38,7 @@ export default function FleetShowcase() {
         "Ideal for wheeled equipment",
         "Quick turnaround",
       ],
-      image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Tilt+Trailers",
+      image: "/images/trailer-type.webp",
     },
     {
       title: "Multi-Axle Power Units",
@@ -48,7 +48,7 @@ export default function FleetShowcase() {
         "Specialized for oversized loads",
         "Experienced operator teams",
       ],
-      image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Power+Units",
+      image: "/images/trailer-type.webp",
     },
   ];
 

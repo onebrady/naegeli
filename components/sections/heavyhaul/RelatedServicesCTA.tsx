@@ -19,7 +19,7 @@ export default function RelatedServicesCTA() {
           </p>
 
           <a
-            href="/services/crane-rigging-machine-tool-moving"
+            href="/machine-tool-moving-crane-rigging"
             className="inline-flex items-center gap-2 bg-white text-orange-600 font-semibold px-8 py-4 rounded-md hover:bg-slate-50 transition-all hover:scale-105 shadow-lg min-h-[44px]"
           >
             Explore Crane & Rigging Services

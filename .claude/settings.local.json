@@ -10,7 +10,9 @@
       "Bash(npx playwright install:*)",
       "Bash(node:*)",
       "Bash(npx playwright screenshot:*)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(ls:*)",
+      "Bash(xargs:*)"
     ],
     "deny": [],
     "ask": []

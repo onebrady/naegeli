@@ -48,7 +48,7 @@ export default function ServiceAreaCoverage() {
           <div className="order-2 lg:order-1">
             <div className="relative w-full aspect-square bg-slate-100 rounded-lg overflow-hidden border border-slate-200">
               <Image
-                src="https://placehold.co/600x600/f1f5f9/64748b?text=Service+Area+Map"
+                src="/images/houston-basedx.webp"
                 alt="Naegeli Transportation service area map showing coverage in TX, LA, AR, OK, MS"
                 fill
                 className="object-contain p-8"

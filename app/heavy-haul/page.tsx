@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Header from "@/components/header/Header";
 import Footer from "@/components/header/Footer";
-import HeavyHaulHero from "@/components/sections/heavyhaul/HeavyHaulHero";
+import HeavyHaulPageHeader from "@/components/sections/heavyhaul/HeavyHaulPageHeader";
 import SocialProofBanner from "@/components/sections/heavyhaul/SocialProofBanner";
 import ServiceOverview from "@/components/sections/heavyhaul/ServiceOverview";
 import WhatSetsUsApart from "@/components/sections/heavyhaul/WhatSetsUsApart";
@@ -38,8 +38,8 @@ export default function HeavyHaulPage() {
   return (
     <>
       <Header />
-      <main id="main">
-        <HeavyHaulHero />
+      <main id="main" className="pt-[105px] md:pt-[129px]">
+        <HeavyHaulPageHeader />
         <SocialProofBanner />
         <ServiceOverview />
         <WhatSetsUsApart />

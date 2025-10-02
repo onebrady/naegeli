@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function SocialProofBanner() {
   const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -9,45 +11,47 @@ export default function SocialProofBanner() {
 
   // Equipment OEMs
   const oems = [
-    { name: "DMG MORI", id: "dmg-mori" },
-    { name: "Mazak", id: "mazak" },
-    { name: "Okuma", id: "okuma" },
-    { name: "Toshiba", id: "toshiba" },
+    { name: "DMG MORI", logo: "/images/dmg-mori-logo.png" },
+    { name: "Mazak", logo: "/images/mazak-logo.webp" },
+    { name: "Okuma", logo: "/images/okuma-logo.webp" },
+    { name: "Toshiba", logo: "/images/toshiba-logo.webp" },
   ];
 
   // Industrial Clients
   const industrialClients = [
-    { name: "Baker Hughes", id: "baker-hughes" },
-    { name: "Halliburton", id: "halliburton" },
-    { name: "Schlumberger", id: "schlumberger" },
-    { name: "Cameron", id: "cameron" },
-    { name: "NOV", id: "nov" },
-    { name: "Mustang CAT", id: "mustang-cat" },
-    { name: "Cloeren", id: "cloeren" },
-    { name: "Magni", id: "magni" },
+    { name: "Baker Hughes", logo: "/images/baker-hughes-logo.webp" },
+    { name: "Halliburton", logo: "/images/halliburton-logo.webp" },
+    { name: "Schlumberger", logo: "/images/slb-logo.png" },
+    { name: "Cameron", logo: "/images/cameron-logo.png" },
+    { name: "NOV", logo: "/images/nov-logo.webp" },
+    { name: "Mustang CAT", logo: "/images/mustang-cat-logo.png" },
+    { name: "Cloeren", logo: "/images/cloeren-logo.webp" },
+    { name: "Magni", logo: "/images/magni-logo.webp" },
   ];
 
   return (
-    <section className="section bg-white py-12 md:py-16">
+    <section className="bg-slate-50 py-12 lg:py-16">
       <div className="container">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-900">
+        <h2 className="text-center text-xl sm:text-2xl font-semibold text-slate-700 mb-8">
           Trusted by Industry Leaders
         </h2>
 
         {/* Equipment Manufacturers Row */}
         <div className="mb-6">
           <p className="text-center text-sm text-slate-600 mb-4 font-semibold">Equipment Manufacturers</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-8">
             {oems.map((oem) => (
               <div
-                key={oem.id}
-                className="flex items-center justify-center p-4 bg-slate-50 rounded-lg border border-slate-200 hover:border-orange-300 transition-colors min-h-[80px]"
+                key={oem.name}
+                className="flex items-center justify-center p-4 bg-white rounded-lg border border-slate-200 grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
               >
-                {/* TODO: Replace with actual logo images */}
-                <div className="text-center">
-                  <div className="text-slate-400 text-xs mb-1">LOGO</div>
-                  <div className="text-slate-700 font-semibold text-sm">{oem.name}</div>
-                </div>
+                <Image
+                  src={oem.logo}
+                  alt={`${oem.name} logo`}
+                  width={140}
+                  height={56}
+                  className="object-contain"
+                />
               </div>
             ))}
           </div>
@@ -56,28 +60,29 @@ export default function SocialProofBanner() {
         {/* Industrial Clients Row */}
         <div>
           <p className="text-center text-sm text-slate-600 mb-4 font-semibold">Industrial Clients</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {industrialClients.map((client) => (
               <div
-                key={client.id}
-                className="flex items-center justify-center p-4 bg-slate-50 rounded-lg border border-slate-200 hover:border-orange-300 transition-colors min-h-[80px]"
+                key={client.name}
+                className="flex items-center justify-center p-4 bg-white rounded-lg border border-slate-200 grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
               >
-                {/* TODO: Replace with actual logo images */}
-                <div className="text-center">
-                  <div className="text-slate-400 text-xs mb-1">LOGO</div>
-                  <div className="text-slate-700 font-semibold text-sm">{client.name}</div>
-                </div>
+                <Image
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  width={140}
+                  height={56}
+                  className="object-contain"
+                />
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-10">
           <a
             href="#quote"
             onClick={scrollToQuote}
-            className="inline-block btn btn-primary px-8 py-3 min-h-[44px]"
+            className="btn btn-secondary text-sm sm:text-base px-6 py-2.5 min-h-[44px]"
           >
             Get a Quote
           </a>

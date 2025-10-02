@@ -8,11 +8,11 @@ import SearchBar from "./SearchBar";
 import MobileMenu from "./MobileMenu";
 
 const navLinks = [
-  { label: "Services", href: "#" },
+  { label: "Heavy Haul", href: "/heavy-haul" },
+  { label: "Machine Moving", href: "/machine-tool-moving-crane-rigging" },
   { label: "About Us", href: "#" },
   { label: "Contact Us", href: "#" },
   { label: "Employment", href: "#" },
-  { label: "Invoices", href: "#" },
   { label: "News", href: "#" },
 ];
 

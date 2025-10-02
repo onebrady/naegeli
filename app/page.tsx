@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main id="main">
+      <main id="main" className="pt-[105px] md:pt-[129px]">
         <Hero />
         <ServiceCards />
         <ProofBar />
